@@ -52,17 +52,18 @@ def signup(request):
                 usr.save()
                 template=render_to_string('mail_body.html',{'name':usr.user,'code':usr.verification_code})
                 recipient=str(get_new_user.email)
-                email=EmailMessage(
-                'Confirmation E-mail',
-                 template,
-                 settings.EMAIL_HOST_USER,
-                 [recipient]
+                
+                # email=EmailMessage(
+                # 'Confirmation E-mail',
+                #  template,
+                #  settings.EMAIL_HOST_USER,
+                #  [recipient]
 
-                )
-                email.send()
+                # )
+                # email.send()
 
 
-                messages.success(request,'Your account has been created successfully please login and verify your e-mail')
+                messages.success(request,"The email verification service in temporarily unavailable. Please try again later")
                 return redirect('login')
         else:
             fm=createaccount()
