@@ -1,0 +1,33 @@
+{%load static%}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'interface/homestyle.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class='logocont'>
+		<a href="{%url 'home'%}"><img src="{%static 'images/weblogo.png'%}" class="logo"></a>
+		</div>
+
+		<div class="content">
+			<div class="text"> 
+				<div class='mar'>
+				<h1 class="welcome">Welcome to PERSONA!</h1><br><br>
+				<p>Persona is an online diary app which allows you to create your own diary to write all about your personal thoughts and feelings.</p><br>
+				<p>Persona also has features allowing you to create a list of all your favorite entertainment media such as anime,movies etc along with their rating and review.</p>
+				<p> In order to use persona you can either</p><br>
+				<div class="links"><div class='link1'><a class='login' href="{%url 'login'%}">Login   </a><br> </div><div class="link2"> <a class='signup' href="{%url 'signup'%}">  Sign up </a></div></div>
+				</div>
+			</div>
+
+			<div class="pic">
+				<img src="{%static 'images/study.jpg'%}" class="study">
+
+			</div>
+		</div> <!-- main flex ends here -->
+
+	</body>
+</html>

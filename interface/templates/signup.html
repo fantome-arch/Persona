@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		<title> Sign up</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'interface/authenticate.css' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<a href="{%url 'home'%}"><div class='imgholder'><img src="{%static 'images/weblogo.png'%}" class="img"></div></a>
+			
+			<form class="form_main" method="POST">
+				{% csrf_token %}
+				<div class="title"><h1>Sign Up</h1></div>
+
+				{%for fm in form%}
+
+				<div class="field">
+					<div class="field_pos_ctrl">{{fm}} <span class="contentx">{{fm.label_tag}}</span>
+					</div>
+				    
+
+				</div>
+				<div class='errors'>{{fm.errors|striptags}}</div>
+
+
+
+
+				{%endfor%}
+				<div class="create_btn"><input type='submit' class='btn' value="Create an account"></div>
+
+			</form>
+
+
+
+
+	</body>
+
+</html>

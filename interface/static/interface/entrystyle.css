@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+
+.edit{
+
+box-shadow: 2px 5px 2px #2c0278;
+background-color: #f8f5fc;
+position: relative;
+height: 1000px;
+justify-content: space-around;
+display: flex;
+flex-direction: column;
+width: 70%;
+margin-left: 16%;
+align-items: center;
+margin-top: 5%;
+padding: 10px;
+}
+
+label{
+padding:5px;
+color: #2d0069;
+}
+.titlefield{
+
+width: auto;
+height: 50px;
+outline-color: #c987ff ;
+border-radius: 20px;
+padding: 5px;
+outline:none;
+border-color: #3e0070;
+}
+
+.datefield{
+
+width: auto;
+height: 50px;
+outline:none;
+border-radius: 20px;
+padding: 5px;
+border-color: #3e0070;
+}
+input:focus{
+
+border-color: #b664fa;
+
+
+}
+.heading{
+
+text-align: center;
+padding-top:100px ;
+font-family: 'Source Sans Pro';
+color: #3800a1;
+font-size: 100px;
+letter-spacing: 4px;
+
+}
+
+.btnsave{
+width: 300px;
+height: 100px;
+background-color:transparent;
+border-color: #300a78;
+border-radius: 50px;
+color: #28026e;
+text-align: center;
+transition: 0.5s ease;
+}
+.btnsave:hover{
+
+box-shadow: inset 300px 0 0 0 #28026e;
+color: white;
+
+}

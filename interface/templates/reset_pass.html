@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Forgot Password</title>
+
+
+</head>
+<body>
+<div>
+<h2>Reset your password</h2>
+{{message}}
+{{msg}}
+<form method="POST">
+{%csrf_token%}
+{%for fm in form%}
+{{fm}}
+{%endfor%}
+<input type="submit" name="Submit">
+</form>
+</div>
+
+
+
+</body>
+</html>

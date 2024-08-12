@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%load static%}
+
+<head></head>
+<body>
+{%block content%}
+<div>Your account has not been verified yet. Please check your e-mail for a 6-digit verification code and Enter it below</div>
+
+<form method=POST>
+	{%csrf_token%}
+	{{error}}
+	{%for fm in form%}
+		{{fm}}
+	{%endfor%}
+	<input type="submit" name="Verify">
+	<a href="{%url 'resend'%}">Resend E-mail</a>
+
+
+
+</form>
+
+{%endblock%}
+</body>

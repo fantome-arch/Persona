@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<link rel="stylesheet" type="text/css" href="{%static 'interface/viewing.css'%}">
+<head><title id="title">view entries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="diary_content">
+	<div class='navigation'>
+		<h2 class="boxtitle">Entries</h2>
+	{%for entry in entries%}
+		<a href="{%url 'showentry' user=request.user no=entry.id%}" class="navheading">{{forloop.counter}}.  {{entry.title}}</a>
+	{%endfor%}
+	</div>
+	<div class="viewentries">
+
+		{%if viewingstate%}
+		<h1 class="entryname">{{diaryentry.title}} </h1><br><h3 class="entrydate">Dated: {{diaryentry.date}}</h3><br>
+		<div class="entrycontent">{{diaryentry.content|safe}}</div>
+		<div class="contentedit"><a href="{%url 'update_entry' object=diaryentry.id%}" class="editbtntext">✏️Edit </a> <a href="{%url 'delete_entry' object=diaryentry.id %}" class="deletebtntext">🗑️ Delete</a></div>
+		{%else%}
+			<h1 class="notselectedpg">{{diaryentry}}</h1>
+			<h2>{{noentry}}</h2>
+		{%endif%}
+
+
+
+
+	</div>
+</div>
+
+{%endblock%}

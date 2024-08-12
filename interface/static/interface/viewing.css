@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+.diary_content{
+
+display: flex;
+margin: 10px;
+justify-content: space-between;
+align-items: center;
+}
+.navigation{
+
+display: flex;
+flex-direction: column;
+height: 1100px;
+width: 500px;
+background-color: #ffd6da;
+margin-top: 5px;
+border-radius: 20px;
+box-shadow: 2px 2px 3px #fa1129;
+overflow-x: hidden;
+overflow-y: auto;
+
+}
+
+.viewentries{
+
+margin-right: 150px;
+text-align: center;
+width: 1000px;
+height: 1000px;
+
+
+}
+
+.entrycontent{
+
+background: url('/static/images/diarypage.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 900px;
+opacity: 80%;
+box-shadow: 5px 3px 5px #382104;
+margin-left: 10px;
+border-radius: 20px;
+word-wrap: break-word;
+
+}
+
+.entryname{
+font-family:'Source Sans Pro' ;
+background-color: #1e023b;
+color: white;
+text-align: center;
+border-radius: 100px;
+letter-spacing: 8px;
+box-shadow: 3px 3px 5px purple;
+
+
+}
+.entrydate{
+
+background-color: #72f7c6;
+color: #00452c;
+border-radius: 20px;
+box-shadow: 3px 3px 5px #00452c;
+
+}
+
+.navheading{
+margin-left: 0px;
+margin-top: 25px;
+margin-bottom: 25px;
+font-family:'Source Sans Pro' ;
+text-decoration: none;
+font-size: 50px;
+background-color: #d9a8ff;
+width: 95%;
+text-align: center;
+border-radius: 20px;
+height: 20%;
+
+
+
+
+
+}
+.boxtitle{
+margin-top: 0px;
+font-family:'Source Sans Pro' ;
+color: white;
+background-color: #1e023b;
+font-size: 50px;
+width: 100%;
+text-align: center;
+border-radius: 20px;
+
+
+}
+@media screen and (max-width: 800px){
+
+
+
+.diary_content{
+
+display: flex;
+flex-direction: column;
+margin: 10px;
+justify-content: space-around;
+align-items: center;
+
+}
+
+
+
+
+}
+.notselectedpg{
+
+margin-top: 100px;
+color: #006073;
+background-color:#a8ffe2 ;
+border: 2px solid #02bf80;
+box-shadow: 2px 1px 5px #016e49;
+}
+
+.contentedit{
+margin-top: 30px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+
+}
+
+.editbtntext{
+padding: 20px;
+text-decoration: none;
+text-align: center;
+font-family: Source Sans Pro;
+border-radius: 50px;
+color: #ae80ff;
+border: 1px solid #2f0173;
+transition: 0.5s ease;
+
+
+
+}
+.deletebtntext{
+padding: 20px;
+text-decoration: none;
+text-align: center;
+font-family: Source Sans Pro;
+border-radius: 50px;
+color: #730105;
+border: 1px solid #730105;
+transition: 0.5s ease;
+
+
+}
+.editbtntext:hover{
+
+color: white;
+box-shadow: inset 300px 0 0 0 #120054;
+
+
+}
+.deletebtntext:hover{
+color: white;
+box-shadow: inset 300px 0 0 0 #730105 ;
+
+
+}

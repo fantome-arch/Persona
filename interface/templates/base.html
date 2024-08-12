@@ -1,0 +1,79 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="{%static 'interface/style.css'%}">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+
+	<body>
+		
+		<div class="navbar">
+			<div class="logo"><a href="{%url 'home'%}"><img src="{%static 'images/weblogo.png'%}" class="image"></a></div>
+
+			
+			<div class="men hme"><a href="{%url 'home'%}" class='text main' id='home'><i class="fas fa-home"></i>Home</a></div>
+
+
+			<div class="men ex"><a href="{%url 'entry'%}" class='text main ' id='diary'><i class="fas fa-book"></i>Diary </a><br>
+							  <div class="sub">
+							  <a href="{%url 'entry'%}" class='text'>Write An Entry</a><br><br>
+							  <a href="{%url 'viewentry' request.user%}" class='text' >View your Diary</a>
+							  </div>
+
+
+
+			</div>
+			<div class="men fav"><a href="" class='text main'><i class="far fa-heart"></i>Favorites</a><br>
+									<div class="sub">
+							       <a href="" class='text'>Movies</a><br><br>
+							       <a href="" class='text'>Tv Shows</a><br><br>
+							       <a href="" class='text'>Music</a><br><br>
+							       <a href="" class='text'>Anime</a><br><br>
+							       <a href="" class='text'>Manga</a><br><br>
+							       <a href="" class='text'>books</a>
+							   </div>
+
+
+
+
+			</div>
+			<div class="men set"><a href="" class='text main'><i class="fas fa-cog"></i>Settings</a><br>
+								  <div class="sub">
+				                  <a href="" class='text'>Profile</a><br><br>
+				                  <a href="{%url 'logout'%}" class='text'>Log Out</a>
+				                  </div>
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+	{%block content%}
+	<title id='title'>Home</title>
+	<br><br>
+	<div class="homeinitial">
+	<div class="entryanddiary">
+	<a href="{%url 'entry'%}" class="btntxt1">Write an Entry</a>
+	<a href="{%url 'viewentry' request.user%}" class="btntxt1">View Diary</a>
+    </div>
+    <div class="favorites">
+    	<a href="" class='btntxt1'>Favorites</a>
+
+    </div>
+	</div>
+
+
+	{%endblock%}
+
+	</body>
+	<script src="{%static 'javascriptfiles/underline.js'%}"></script>
+	<span class="copyright">©2021 PERSONA,All Rights Reserved </span>
+</html>

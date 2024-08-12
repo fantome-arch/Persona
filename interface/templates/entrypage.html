@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+{%block content%}
+<head>
+	<title id="title">Write Entry</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<link rel="stylesheet" type="text/css" href="{%static 'interface/entrystyle.css'%}">
+
+
+{%if message%}
+		{{message}}
+	{%endif%}
+	<h1 class="heading">Write Your Diary Entry!</h1>
+	<form method="POST" class="edit">
+		{%csrf_token%}
+		{{form.media}}
+		<div class="titleanddate">
+		<label class="titlelabel">Title: </label>{{form.title}}
+		<label class="datelabel">Date: </label>{{form.date}}<br><br>
+		</div>
+		<div class='contentdiv'><label class="contentlabel">content: </label><br>{{form.content}}</div>
+	 <div class="btn"><input class='btnsave' type="submit" value="Save"></div>
+	</form>
+
+<script src="{%static 'javascriptfiles/underline.js'%}"></script>
+
+
+{%endblock%} 
